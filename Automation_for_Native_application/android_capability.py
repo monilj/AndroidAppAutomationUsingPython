@@ -13,12 +13,3 @@ def des_cap():
         appActivity='com.google.android.apps.youtube.app.WatchWhileActivity')
     driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
     return driver
-
-
-drive_instance = des_cap()
-el = drive_instance.find_element_by_accessibility_id('Search')
-el.click()
-edit_box = drive_instance.find_element_by_id('search_edit_text')
-edit_box.click()
-edit_box.send_keys("Appium automation")
-drive_instance.find_element_by_id('com.google.android.youtube:id/text').click()

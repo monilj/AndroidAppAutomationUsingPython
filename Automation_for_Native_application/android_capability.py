@@ -9,6 +9,11 @@ common_cap_dict = dict(
     deviceName='Pixel 2 API 28 2')
 
 
+def return_driver(caps):
+    driver = webdriver.Remote('http://localhost:4723/wd/hub', caps)
+    return driver
+
+
 def des_cap_youtube():
     desired_caps = dict(
         # platformName='Android',
@@ -18,8 +23,9 @@ def des_cap_youtube():
         common_cap_dict,
         appPackage='com.google.android.youtube',
         appActivity='com.google.android.apps.youtube.app.WatchWhileActivity')
-    driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-    return driver
+    # driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+    # return driver
+    return return_driver(desired_caps)
 
 
 def des_cap_learn_android_using_source_code():
@@ -28,5 +34,4 @@ def des_cap_learn_android_using_source_code():
         # appPackage='com.tutorials.learn.androidexample',
         # appActivity='com.tutorials.learn.androidexample.MainActivity')
         app='/Users/localadmin/Downloads/APK/Learn_Android_With_Source.apk')
-    driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-    return driver
+    return return_driver(desired_caps)

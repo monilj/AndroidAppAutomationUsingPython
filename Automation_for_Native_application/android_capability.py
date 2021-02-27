@@ -21,7 +21,8 @@ def des_cap_learn_android_using_source_code():
         platformVersion='9',
         automationName='uiautomator2',
         deviceName='Pixel 2 API 28 2',
-        appPackage='com.tutorials.learn.androidexample',
-        appActivity='com.tutorials.learn.androidexample.MainActivity')
+        # appPackage='com.tutorials.learn.androidexample',
+        # appActivity='com.tutorials.learn.androidexample.MainActivity')
+        app='/Users/localadmin/Downloads/APK/Learn_Android_With_Source.apk')
     driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
     return driver
